@@ -6,7 +6,7 @@ exports.handler = async (event, context) => {
     const { headcount, family } = JSON.parse(event.body);
 
     await client.messages.create({
-        body: `The ${family} family is coming to Rowan's party! They are bringing ${headcount} guests.`,
+        body: `The ${family} family is coming to Vivien's party! They are bringing ${headcount} guests.`,
         from: '+14023789202',
         to: process.env.PHONE_NUMBER,
     });
