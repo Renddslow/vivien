@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Vivien's 3rd Birthday Party</title>
+        <style>
+            body {
+                background: #FF7700;
+                color: #2E4057;
+                font-size: 16px;
+            }
+
+            * {
+                font-weight: 500;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            #wrapper {
+                display: grid;
+                width: 100%;
+                margin: 0 auto;
+                grid-template-columns: minmax(0, 4fr) minmax(0, 5fr);
+                max-width: 1200px;
+                align-items: end;
+                border: 2px solid #FFE223;
+            }
+
+            .card img {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                object-fit: cover;
+            }
+
+            h1 {
+                font-size: 90px;
+                text-align: center;
+                font-weight: 900;
+                margin-bottom: 32px;
+            }
+
+            strong {
+                color: #efefef;
+                text-decoration: underline;
+                text-decoration-color: #FFE223;
+            }
+
+            h1 strong {
+                font-family: cursive;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                width: 100%;
+                margin: 0 auto;
+                grid-gap: 2px;
+                background: #FFE223;
+                border-right: 2px solid #FFE223;
+            }
+
+            .grid img:not([src]) {
+                appearance: none;
+                background: #FF7700;
+            }
+
+            .grid img {
+                aspect-ratio: 1/1;
+                width: 100%;
+                object-fit: cover;
+                display: block;
+                border: 0;
+            }
+
+            .details {
+                padding: 0 24px 24px;
+                display: grid;
+                font-size: 18px;
+                grid-gap: 8px;
+            }
+
+            @media screen and (max-width: 1200px) {
+                #wrapper {
+                    grid-template-columns: 1fr;
+                }
+
+                h1 {
+                    font-size: 60px;
+                }
+
+                .grid {
+                    border-right: 0;
+                    border-bottom: 2px solid #FFE223;
+                }
+
+                .details {
+                    padding: 24px;
+                }
+            }
+
+            form {
+                width: 100%;
+                border-top: 2px solid #FFE223;
+                background: #fff;
+                padding: 24px;
+            }
+
+            .card ~ p {
+                margin-bottom: 48px;
+            }
+
+            form p {
+                font-size: 16px;
+                margin-bottom: 24px;
+            }
+
+            .form-control:not(:last-child) {
+                margin-bottom: 18px;
+            }
+
+            label {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+                font-weight: 800;
+                font-size: 14px;
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            input {
+                font-size: 16px;
+                width: 100%;
+                display: block;
+                padding: 8px 12px;
+            }
+
+            button {
+                background: transparent;
+                font-size: 18px;
+                padding: 8px 12px;
+                border: 2px double #FF7700;
+                color: #FF7700;
+                margin-left: auto;
+                display: block;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+    <h1>“It's good to <strong>bee</strong> three”</h1>
+        <div id="wrapper">
+            <div class="grid">
+                <img data-src="images/1.jpg" />
+                <img data-src="images/2.jpg" />
+                <img data-src="images/3.jpg" />
+                <img data-src="images/4.jpg" />
+                <img data-src="images/5.jpg" />
+                <img data-src="images/6.jpg" />
+                <img data-src="images/7.jpg" />
+                <img data-src="images/8.jpg" />
+                <img data-src="images/9.jpg" />
+                <img data-src="images/10.jpeg" />
+                <img data-src="images/11.jpg" />
+                <img data-src="images/12.jpg" />
+                <img data-src="images/13.jpg" />
+                <img data-src="images/14.jpg" />
+                <img data-src="images/15.jpg" />
+                <img data-src="images/16.jpg" />
+            </div>
+            <div>
+                <div class="details">
+                    <p>Buzz along with us as we celebrate Vivien's <strong>3rd birthday</strong>!</p>
+                    <p><strong>Friday, November 4th at 5:30pm</strong></p>
+                    <p>8234 N 167th Street<br />Bennington, NE 68007</p>
+                    <p>Food, drinks, snacks, and birthday treats will be provided</p>
+                    <p><strong>Please do not bring gifts.</strong> We just want to celebrate Vivien's 3 years and thank each of you for helping us reach this milestone.</p>
+                </div>
+
+                <form id="rsvp">
+                    <div id="form-body">
+                        <p>Let us know you'll be there so we can have an accurate headcount.</p>
+                        <div class="form-control">
+                            <label for="family-name">Family Name</label>
+                            <input type="text" id="family-name" name="family" autocomplete="family-name" />
+                        </div>
+                        <div class="form-control">
+                            <label for="headcount">How many are coming with you (a guess is fine)?</label>
+                            <input type="number" id="headcount" name="headcount" />
+                        </div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            (() => {
+                document.getElementById('rsvp').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const headcount = e.target.headcount.value;
+                    const family = e.target.family.value;
+
+                    document.querySelector('form button').innerText = 'Submitting...';
+                    document.querySelector('form button').disabled = true;
+
+                    fetch('/.netlify/functions/notify', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            headcount,
+                            family
+                        }),
+                    }).then(() => {
+                        document.getElementById('form-body').innerHTML = '<p>Thanks for letting us know. Excited to see you there!</p>';
+                    })
+                });
+            })();
+            (() => {
+                // lazy load images
+                const images = document.querySelectorAll('img[data-src]');
+                // fetch all images
+                images.forEach((image) => {
+                    const img = new Image();
+                    img.src = image.dataset.src;
+                    img.onload = () => {
+                        image.src = img.src;
+                    };
+                });
+            })();
+        </script>
+    </body>
+</html>
