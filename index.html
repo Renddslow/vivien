@@ -1,250 +1,390 @@
 <!doctype html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Vivien's 3rd Birthday Party</title>
-        <style>
-            body {
-                background: #FF7700;
-                color: #2E4057;
-                font-size: 16px;
-            }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+    <title>Vivien's 4th Birthday Party 🎉😌🌱</title>
+    <meta name="title" content="🎉😌🌱 Vivien's 4th Birthday Party" />
+    <meta
+      name="description"
+      content="You'e invited to a relaxing spa-evening, filled with rejuvenation, cereal, and pajamas."
+    />
 
-            * {
-                font-weight: 500;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vivienmcelwee.com/" />
+    <meta property="og:title" content="🎉😌🌱 Vivien's 4th Birthday Party" />
+    <meta
+      property="og:description"
+      content="You'e invited to a relaxing spa-evening, filled with rejuvenation, cereal, and pajamas."
+    />
+    <meta
+      property="og:image"
+      content="https://vivienmcelwee.com/thumbs_up.jpeg"
+    />
 
-            #wrapper {
-                display: grid;
-                width: 100%;
-                margin: 0 auto;
-                grid-template-columns: minmax(0, 4fr) minmax(0, 5fr);
-                max-width: 1200px;
-                align-items: end;
-                border: 2px solid #FFE223;
-            }
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://vivienmcelwee.com/" />
+    <meta
+      property="twitter:title"
+      content="🎉😌🌱 Vivien's 4th Birthday Party"
+    />
+    <meta
+      property="twitter:description"
+      content="You'e invited to a relaxing spa-evening, filled with rejuvenation, cereal, and pajamas."
+    />
+    <meta
+      property="twitter:image"
+      content="https://vivienmcelwee.com/thumbs_up.jpeg"
+    />
+    <style>
+      :root {
+        --accent: #248f1f;
+      }
 
-            .card img {
-                width: 100%;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                object-fit: cover;
-            }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue",
+          sans-serif;
+      }
 
-            h1 {
-                font-size: 90px;
-                text-align: center;
-                font-weight: 900;
-                margin-bottom: 32px;
-            }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+      }
 
-            strong {
-                color: #efefef;
-                text-decoration: underline;
-                text-decoration-color: #FFE223;
-            }
+      body {
+        background: #fff;
+        color: #131b10;
+        font-size: 16px;
+        scroll-behavior: smooth;
+      }
 
-            h1 strong {
-                font-family: cursive;
-            }
+      .hero {
+        padding: 24px 24px 64px;
+        position: relative;
+      }
 
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(4, minmax(0, 1fr));
-                width: 100%;
-                margin: 0 auto;
-                grid-gap: 2px;
-                background: #FFE223;
-                border-right: 2px solid #FFE223;
-            }
+      .hero img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center right;
+        z-index: -2;
+      }
 
-            .grid img:not([src]) {
-                appearance: none;
-                background: #FF7700;
-            }
+      .hero .text {
+        width: 50%;
+        max-width: 640px;
+        margin: 24px 0;
+      }
 
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                }
+      @media screen and (max-width: 767px) {
+        .hero .text {
+          width: 100%;
+        }
+      }
 
-                to {
-                    opacity: 1;
-                }
-            }
+      @media screen and (min-width: 768px) {
+        .hero .text {
+          margin: 48px 0 48px 64px;
+        }
+      }
 
-            .grid img[src] {
-                animation: fadeIn 1.5s;
-            }
+      .hero .text h1 {
+        font-size: 50px;
+      }
 
-            .grid img {
-                aspect-ratio: 1/1;
-                width: 100%;
-                object-fit: cover;
-                display: block;
-                border: 0;
-            }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 20%,
+          rgba(255, 255, 255, 0.3) 100%
+        );
+        z-index: -1;
+      }
 
-            .details {
-                padding: 0 24px 24px;
-                display: grid;
-                font-size: 18px;
-                grid-gap: 8px;
-            }
+      .details {
+        --shadow-color: 0deg 0% 45%;
+        border-radius: 24px;
+        padding: 24px;
+        background: #fff;
+        box-shadow:
+          0 0.5px 0.7px hsl(var(--shadow-color) / 0.65),
+          0 0 100px 12px hsl(var(--shadow-color) / 0.3);
+        max-width: 768px;
+        margin: -56px auto 56px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+        overflow: hidden;
+      }
 
-            @media screen and (max-width: 1200px) {
-                #wrapper {
-                    grid-template-columns: 1fr;
-                }
+      .details .container {
+        display: grid;
+        grid-gap: 24px;
+      }
 
-                h1 {
-                    font-size: 60px;
-                }
+      .details ul {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
 
-                .grid {
-                    border-right: 0;
-                    border-bottom: 2px solid #FFE223;
-                }
+      .deet {
+        list-style: none;
+        display: grid;
+        grid-gap: 8px;
+        width: 85px;
+        text-align: center;
+      }
 
-                .details {
-                    padding: 24px;
-                }
-            }
+      .deet i {
+        font-size: 64px;
+        color: var(--accent);
+      }
 
-            form {
-                width: 100%;
-                border-top: 2px solid #FFE223;
-                background: #fff;
-                padding: 24px;
-            }
+      .deet span {
+        font-weight: 600;
+        font-size: 14px;
+      }
 
-            .card ~ p {
-                margin-bottom: 48px;
-            }
+      .warn {
+        border-top: 1px solid #ccc;
+        padding: 24px 0 0;
+      }
 
-            form p {
-                font-size: 16px;
-                margin-bottom: 24px;
-            }
+      .details .image {
+        width: 100%;
+        height: calc(100% + 48px);
+        margin: -24px;
+        position: relative;
+      }
 
-            .form-control:not(:last-child) {
-                margin-bottom: 18px;
-            }
+      .details img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
-            label {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-                font-weight: 800;
-                font-size: 14px;
-                display: block;
-                margin-bottom: 8px;
-            }
+      .vivi {
+        color: var(--accent);
+        font-size: 16px;
+        font-weight: 800;
+      }
 
-            input {
-                font-size: 16px;
-                width: 100%;
-                display: block;
-                padding: 8px 12px;
-            }
+      .text p:last-of-type {
+        font-size: 18px;
+        margin: 16px 0;
+      }
 
-            button {
-                background: transparent;
-                font-size: 18px;
-                padding: 8px 12px;
-                border: 2px double #FF7700;
-                color: #FF7700;
-                margin-left: auto;
-                display: block;
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body>
-    <h1>“It's good to <strong>bee</strong> three”</h1>
-        <div id="wrapper">
-            <div class="grid">
-                <img data-src="images/1.jpg" />
-                <img data-src="images/2.jpg" />
-                <img data-src="images/3.jpg" />
-                <img data-src="images/4.jpg" />
-                <img data-src="images/5.jpg" />
-                <img data-src="images/6.jpg" />
-                <img data-src="images/7.jpg" />
-                <img data-src="images/8.jpg" />
-                <img data-src="images/9.jpg" />
-                <img data-src="images/10.jpeg" />
-                <img data-src="images/11.jpg" />
-                <img data-src="images/12.jpg" />
-                <img data-src="images/13.jpg" />
-                <img data-src="images/14.jpg" />
-                <img data-src="images/15.jpg" />
-                <img data-src="images/16.jpg" />
-            </div>
-            <div>
-                <div class="details">
-                    <p>Buzz along with us as we celebrate Vivien's <strong>3rd birthday</strong>!</p>
-                    <p><strong>Friday, November 4th at 5:30pm</strong></p>
-                    <p>8234 N 167th Street<br />Bennington, NE 68007</p>
-                    <p>Food, drinks, snacks, and birthday treats will be provided</p>
-                    <p><strong>Please do not bring gifts.</strong> We just want to celebrate Vivien's 3 years and thank each of you for helping us reach this milestone.</p>
-                </div>
+      h1 em {
+        font-family: "Playfair Display", serif;
+        font-style: normal;
+        position: relative;
+        z-index: 1;
+      }
 
-                <form id="rsvp">
-                    <div id="form-body">
-                        <p>Let us know you'll be there so we can have an accurate headcount.</p>
-                        <div class="form-control">
-                            <label for="family-name">Family Name</label>
-                            <input type="text" id="family-name" name="family" autocomplete="family-name" />
-                        </div>
-                        <div class="form-control">
-                            <label for="headcount">How many are coming with you (a guess is fine)?</label>
-                            <input type="number" id="headcount" name="headcount" />
-                        </div>
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
-            </div>
+      h1 em::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 24px;
+        bottom: 4px;
+        background: var(--accent);
+        border-radius: 4px;
+        z-index: -1;
+        transform: skewX(-10deg);
+        opacity: 0.5;
+      }
+
+      a,
+      button {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue",
+          sans-serif;
+        background: var(--accent);
+        font-weight: 600;
+        color: #fff;
+        padding: 12px 24px;
+        display: block;
+        width: fit-content;
+        border-radius: 50px;
+        text-decoration: none;
+        appearance: none;
+        border: 0;
+      }
+
+      form {
+        padding: 24px 56px 56px;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+
+      .form-control {
+        display: grid;
+        grid-gap: 8px;
+      }
+
+      .form-body {
+        display: grid;
+        grid-gap: 24px;
+      }
+
+      .form-control label {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .form-control input {
+        font-size: 18px;
+        appearance: none;
+        border: 1px solid #acacac;
+        border-radius: 8px;
+        padding: 8px 12px;
+      }
+
+      .confirmation {
+        font-size: 24px;
+        font-family: "Playfair Display", sans-serif;
+        color: #233323;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="text">
+        <p class="vivi">Vivien's 4th Birthday Party</p>
+        <h1><em>Four</em> Your Ultimate Relaxation</h1>
+        <p>
+          You're invited to celebrate with Vivi for a party full of rest and
+          relaxation—I mean, most of the kids are toddlers, how relaxing can it
+          <em>really</em> be.
+        </p>
+        <a href="#deets">See the Details</a>
+      </div>
+      <div class="overlay"></div>
+      <img
+        src="https://images.unsplash.com/photo-1483137140003-ae073b395549?auto=format&fit=crop&q=80&w=1920&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      />
+    </div>
+    <div id="wrapper">
+      <div class="details">
+        <div class="image">
+          <img
+            src="https://images.unsplash.com/photo-1506634064465-7dab4de896ed?auto=format&fit=crop&q=80&w=2787&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          />
         </div>
-        <script>
-            (() => {
-                document.getElementById('rsvp').addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const headcount = e.target.headcount.value;
-                    const family = e.target.family.value;
+        <div class="container">
+          <h2 id="deets">Details</h2>
+          <div>
+            <p><strong>Saturday, November 4th at 5:00pm</strong></p>
+            <p>8234 N 167th Street<br />Bennington, NE 68007</p>
+          </div>
+          <ul>
+            <li class="deet">
+              <i class="ph ph-bowl-food"></i>
+              <span>Cereal Bar Dinner</span>
+            </li>
+            <li class="deet">
+              <i class="ph ph-bathtub"></i> <span>Relax and Rejuvenate</span>
+            </li>
+            <li class="deet">
+              <i class="ph ph-hoodie"></i> <span>Wear your PJ's</span>
+            </li>
+          </ul>
+          <p class="warn">
+            <strong>Please do not bring gifts.</strong> We just want to
+            celebrate Vivien's 3 years and thank each of you for helping us
+            reach this milestone.
+          </p>
+        </div>
+      </div>
 
-                    document.querySelector('form button').innerText = 'Submitting...';
-                    document.querySelector('form button').disabled = true;
+      <form id="rsvp">
+        <div class="form-body">
+          <p>
+            Let us know you'll be there so we can have an accurate headcount.
+          </p>
+          <div class="form-control">
+            <label for="family-name">Family Name</label>
+            <input
+              type="text"
+              id="family-name"
+              name="family"
+              autocomplete="family-name"
+            />
+          </div>
+          <div class="form-control">
+            <label for="headcount"
+              >How many are coming with you (a guess is fine)?</label
+            >
+            <input type="number" id="headcount" name="headcount" />
+          </div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      (() => {
+        document.getElementById("rsvp").addEventListener("submit", (e) => {
+          e.preventDefault();
+          const headcount = e.target.headcount.value;
+          const family = e.target.family.value;
 
-                    fetch('/.netlify/functions/notify', {
-                        method: 'POST',
-                        body: JSON.stringify({
-                            headcount,
-                            family
-                        }),
-                    }).then(() => {
-                        document.getElementById('form-body').innerHTML = '<p>Thanks for letting us know. Excited to see you there!</p>';
-                    })
-                });
-            })();
-            (() => {
-                // lazy load images
-                const images = document.querySelectorAll('img[data-src]');
-                // fetch all images
-                images.forEach((image) => {
-                    const img = new Image();
-                    img.src = image.dataset.src;
-                    img.onload = () => {
-                        image.src = img.src;
-                    };
-                });
-            })();
-        </script>
-    </body>
+          document.querySelector("form button").innerText = "Submitting...";
+          document.querySelector("form button").disabled = true;
+
+          fetch("/.netlify/functions/notify", {
+            method: "POST",
+            body: JSON.stringify({
+              headcount,
+              family,
+            }),
+          }).then(() => {
+            document.querySelector(".form-body").innerHTML =
+              "<p class='confirmation'>Thanks for letting us know. Excited to see you there!</p>";
+          });
+        });
+      })();
+      (() => {
+        // lazy load images
+        const images = document.querySelectorAll("img[data-src]");
+        // fetch all images
+        images.forEach((image) => {
+          const img = new Image();
+          img.src = image.dataset.src;
+          img.onload = () => {
+            image.src = img.src;
+          };
+        });
+      })();
+    </script>
+  </body>
 </html>
